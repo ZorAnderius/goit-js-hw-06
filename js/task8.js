@@ -31,13 +31,12 @@ function onFormSubmitData(event) {
 
   console.log(formData);
 
-  loginFormEl.reset();
-
   //   const formDate = new FormData(event.currentTarget);
 
   //   formDate.forEach((x, y) => {
   //     console.log(`${y} : ${x}`);
   //   });
+  loginFormEl.reset();
 }
 
 function createHTMLElements({ email, password }) {
