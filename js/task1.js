@@ -41,7 +41,6 @@ const buttonEl = btnWrapEl.firstElementChild;
 const clearButtonEl = btnWrapEl.lastElementChild;
 
 buttonEl.addEventListener("click", addCategory);
-
 clearButtonEl.addEventListener("click", onRemoveCategory);
 
 //key that adds the information one time on the HTML page
