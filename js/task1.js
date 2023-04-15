@@ -18,7 +18,7 @@ listEl.forEach((listELement) => {
 });
 
 // add li-content to object infoItem
-let count = 0;
+
 listEl.forEach((listELement) => {
   const { itemArray } = itemInfo;
   const itemTemp = listELement.lastElementChild.children;
@@ -32,10 +32,7 @@ listEl.forEach((listELement) => {
     contentArray.push(item.textContent);
   });
 
-  if (count < listEl.length) {
-    itemArray.push(contentArray);
-  }
-  count++;
+  itemArray.push(contentArray);
 });
 
 //add information into HTML page
@@ -133,6 +130,7 @@ function onRemoveCategory() {
   if (switcher) {
     textBoxEl.innerHTML = "";
     switcher = false;
+    console.clear();
   }
 }
 
