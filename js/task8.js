@@ -31,6 +31,8 @@ function onFormSubmitData(event) {
 
   console.log(formData);
 
+  loginFormEl.reset();
+
   //   const formDate = new FormData(event.currentTarget);
 
   //   formDate.forEach((x, y) => {

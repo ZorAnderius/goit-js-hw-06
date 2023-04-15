@@ -13,7 +13,7 @@ itemInfo.length = listEl.length;
 // add title to object infoItem
 listEl.forEach((listELement) => {
   const { titleArray } = itemInfo;
-  const titleElement = listELement.querySelector("h2");
+  const titleElement = listELement.firstElementChild;
   titleArray.push(titleElement.textContent);
 });
 
@@ -21,10 +21,14 @@ listEl.forEach((listELement) => {
 let count = 0;
 listEl.forEach((listELement) => {
   const { itemArray } = itemInfo;
-  const itemTemp = listELement.querySelectorAll("li");
+  const itemTemp = listELement.lastElementChild.children;
 
   const contentArray = [];
-  itemTemp.forEach((item) => {
+  // Object.keys(itemTemp).forEach((item) => {
+  //   contentArray.push(item.textContent);
+  // });
+
+  Array.prototype.forEach.call(itemTemp, (item) => {
     contentArray.push(item.textContent);
   });
 
@@ -35,8 +39,10 @@ listEl.forEach((listELement) => {
 });
 
 //add information into HTML page
-const buttonEl = document.querySelector('[data-add="add-content"]');
-const clearButtonEl = document.querySelector('[data-clear="clear-content"]');
+const btnWrapEl = document.querySelector(".btn-wrap-task1");
+const buttonEl = btnWrapEl.firstElementChild;
+const clearButtonEl = btnWrapEl.lastElementChild;
+
 buttonEl.addEventListener("click", addCategory);
 
 clearButtonEl.addEventListener("click", onRemoveCategory);
