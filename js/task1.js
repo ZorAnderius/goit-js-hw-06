@@ -24,13 +24,13 @@ listEl.forEach((listELement) => {
   const itemTemp = listELement.lastElementChild.children;
 
   const contentArray = [];
-  // Object.keys(itemTemp).forEach((item) => {
-  //   contentArray.push(item.textContent);
-  // });
 
   Array.prototype.forEach.call(itemTemp, (item) => {
     contentArray.push(item.textContent);
   });
+  // Object.keys(itemTemp).forEach((item) => {
+  //   contentArray.push(item.textContent);
+  // });
 
   itemArray.push(contentArray);
 });
